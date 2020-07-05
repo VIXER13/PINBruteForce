@@ -8,11 +8,11 @@ int main(int argc, char** argv) {
     }
 
     try {
-        MD5Utils::MD5Array inputMD5(std::string{argv[1]}, MD5Utils::MD5Array::COMPRESS);
+        const MD5Utils::MD5Array inputMD5(std::string{argv[1]}, MD5Utils::MD5Array::COMPRESS);
         std::cout << "hash: " << inputMD5 << std::endl;
 
         double time = omp_get_wtime();
-        auto pin = MD5Utils::PINBruteForcer<8>::force(inputMD5);
+        const auto pin = MD5Utils::PINBruteForcer<8>::force(inputMD5);
         time = omp_get_wtime() - time;
 
         std::cout << "PIN: ";
