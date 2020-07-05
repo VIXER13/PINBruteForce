@@ -1,0 +1,8 @@
+**Makefile
+**CMakeFiles
+**CMakeCache.txt
+**cmake_install.cmake
+
+example/pin8
+lib/libMD5Utils.a
+tests/runTests
